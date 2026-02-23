@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+body {
+    background-color: #f0f7ff;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ヘッダー */
+.header {
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #3b82f6;
+}
+
+.logo-icon {
+    background-color: #3b82f6;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* メインコンテナ */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.send-section {
+    border-right: 1px solid #e2e8f0;
+}
+
+.content-wrapper {
+    width: 80%;
+    max-width: 450px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* 送信エリアのスタイル */
+.upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upload-area:hover {
+    background-color: #eef2ff;
+}
+
+.icon-circle {
+    background-color: #3b82f6;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.upload-area h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.upload-area p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* 受信エリアのスタイル */
+.receive-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.icon-circle-blue {
+    color: #3b82f6;
+    background-color: #eff6ff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.icon-circle-blue .material-symbols-outlined {
+    font-size: 30px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #64748b;
+}
+
+.input-group input::placeholder {
+    color: #cbd5e1;
+}
+
+.btn-receive {
+    width: 100%;
+    background-color: #93c5fd; /* 無効状態のような淡いブルー */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-receive:hover {
+    background-color: #60a5fa;
+}
+
+/* スマホ対応（レスポンシブ） */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .send-section {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 60px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.upload-button-area{
+    display: flex;
+    justify-content: center;
+}

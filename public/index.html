@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropShare Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="material-symbols-outlined logo-icon">share</span>
+            <span class="logo-text">DropShare</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section send-section">
+            <div class="content-wrapper">
+                <h2>ファイルを送信</h2>
+                <p class="description">ファイルを選択してアップロードすると、共有コードが生成されます</p>
+
+                <form id="uploadForm" method="post" enctype="multipart/form-data">
+                    <input type="file" id="fileInput" name="file" hidden required />
+                    <!-- 見た目のアップロードエリア -->
+                    <div class="upload-area" id="uploadArea">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">upload</span>
+                        </div>
+                        <h3>ファイルを選択</h3>
+                        <p>クリックしてファイルを選択</p>
+                    </div>
+                    <div class="upload-button-area hidden" id="uploadButtonArea">
+                        <button type="submit" class="upload-btn" id="uploadBtn">アップロード</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section receive-section">
+            <div class="content-wrapper">
+                <h2>ファイルを受信</h2>
+                <p class="description">送信者から受け取った8桁のコードを入力してください</p>
+                
+                <div class="receive-card">
+                    <div class="icon-circle-blue">
+                        <span class="material-symbols-outlined">download</span>
+                    </div>
+                    <!-- <div class="input-group">
+                        <label>共有コード</label>
+                        <input type="text" placeholder="8桁のコード" maxlength="8">
+                    </div> -->
+                    <!-- <form id="recv">
+                        <input name="code" inputmode="numeric" pattern="\d{6}" maxlength="6" placeholder="6桁コード" required />
+                        <button type="submit">ダウンロード</button>
+                    </form>
+                    <button class="btn-receive">ファイルを受信</button> -->
+                    <input id="codeInput" type="text" maxlength="6" pattern="\d{6}" placeholder="6桁のコード" />
+                    <button id="downloadBtn">ダウンロード</button>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- JS読み込み -->
+<script src="main.js"></script>
+</body>
+</html>
