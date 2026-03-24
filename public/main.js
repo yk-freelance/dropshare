@@ -1,3 +1,4 @@
+/*
 const uploadArea = document.getElementById("uploadArea");
 const fileInput = document.getElementById("fileInput");
 const form = document.getElementById("uploadForm");
@@ -41,8 +42,6 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-/* ダウンロード */
-
 // 数字のみ入力許可
 input.addEventListener("input", () => {
     input.value = input.value.replace(/\D/g, ""); // 数字以外削除
@@ -61,40 +60,4 @@ downloadButton.addEventListener("click", () => {
     const url = `/download?code=${code}`;
     window.location.href = url;
 })
-
-// document.getElementById("downloadBtn").addEventListener("click", async () => {
-//       try {
-//         const res = await fetch("/download");
-
-//         if (!res.ok) {
-//           alert("ダウンロードに失敗しました");
-//           return;
-//         }
-
-//         // レスポンスをBlobとして受け取る
-//         const blob = await res.blob();
-
-//         // Blobから一時URLを作成
-//         const url = window.URL.createObjectURL(blob);
-
-//         // ⬇️ 自動的にダウンロードさせる
-//         const a = document.createElement("a");
-//         a.href = url;
-//         a.download = "apple.png"; // ダウンロード時のファイル名
-//         document.body.appendChild(a);
-//         a.click();
-
-//         // 後片付け
-//         a.remove();
-//         window.URL.revokeObjectURL(url);
-//       } catch (err) {
-//         console.error(err);
-//       }
-//     });
-
-// document.getElementById("recv").addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     const code = new FormData(e.currentTarget).get("code");
-//     // ブラウザにダウンロードさせる
-//     location.href = `/download?code=${encodeURIComponent(code)}`;
-//   });
+*/

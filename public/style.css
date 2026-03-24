@@ -109,6 +109,85 @@ h2 {
     color: #64748b;
 }
 
+/* 送信完了エリア */
+.upload-complete-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid #dbeafe;
+    border-radius: 24px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.status-badge .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.status-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.share-code-box {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 18px;
+    padding: 18px 16px;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+.expire-message {
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* 確認しましたボタン */
+.btn-confirmed {
+    width: 100%;
+    margin-top: 22px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-confirmed:hover {
+    background-color: #2563eb;
+}
+
+.btn-confirmed:active {
+    transform: translateY(1px);
+}
+
+
 /* 受信エリアのスタイル */
 .receive-card {
     background-color: white;
@@ -182,6 +261,51 @@ h2 {
     background-color: #60a5fa;
 }
 
+/* 受信完了エリア */
+.receive-complete-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid #dbeafe;
+    border-radius: 24px;
+    padding: 36px 28px 28px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.receive-complete-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.receive-complete-message {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.btn-receive-complete {
+    width: 100%;
+    margin-top: 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-receive-complete:hover {
+    background-color: #2563eb;
+}
+
+.btn-receive-complete:active {
+    transform: translateY(1px);
+}
+
+
 /* スマホ対応（レスポンシブ） */
 @media (max-width: 768px) {
     .container {
@@ -201,4 +325,20 @@ h2 {
 .upload-button-area{
     display: flex;
     justify-content: center;
+}
+/* アップロードボタン */
+.btn-upload {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+    /* display: none; */ /* 初期非表示 */
 }

@@ -21,10 +21,11 @@
             <div class="content-wrapper">
                 <h2>ファイルを送信</h2>
                 <p class="description">ファイルを選択してアップロードすると、共有コードが生成されます</p>
-
+                <!-- 送信パネル -->
+                <div class="uploadPanel" id="uploadPanel"></div>
+                <!--
                 <form id="uploadForm" method="post" enctype="multipart/form-data">
                     <input type="file" id="fileInput" name="file" hidden required />
-                    <!-- 見た目のアップロードエリア -->
                     <div class="upload-area" id="uploadArea">
                         <div class="icon-circle">
                             <span class="material-symbols-outlined">upload</span>
@@ -36,6 +37,7 @@
                         <button type="submit" class="upload-btn" id="uploadBtn">アップロード</button>
                     </div>
                 </form>
+                -->
             </div>
         </section>
 
@@ -43,27 +45,21 @@
             <div class="content-wrapper">
                 <h2>ファイルを受信</h2>
                 <p class="description">送信者から受け取った8桁のコードを入力してください</p>
-                
+                <!-- 受信パネル -->
+                <div class="receive-panel" id="receivePanel"></div>
+                <!--
                 <div class="receive-card">
                     <div class="icon-circle-blue">
                         <span class="material-symbols-outlined">download</span>
                     </div>
-                    <!-- <div class="input-group">
-                        <label>共有コード</label>
-                        <input type="text" placeholder="8桁のコード" maxlength="8">
-                    </div> -->
-                    <!-- <form id="recv">
-                        <input name="code" inputmode="numeric" pattern="\d{6}" maxlength="6" placeholder="6桁コード" required />
-                        <button type="submit">ダウンロード</button>
-                    </form>
-                    <button class="btn-receive">ファイルを受信</button> -->
                     <input id="codeInput" type="text" maxlength="6" pattern="\d{6}" placeholder="6桁のコード" />
                     <button id="downloadBtn">ダウンロード</button>
                 </div>
+                -->
             </div>
         </section>
     </main>
 <!-- JS読み込み -->
-<script src="main.js"></script>
+<script src="main2.js"></script>
 </body>
 </html>
